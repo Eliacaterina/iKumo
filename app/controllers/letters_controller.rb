@@ -23,6 +23,9 @@ class LettersController < ApplicationController
 
   def create
     @letter = Letter.new(letter_params)
+    if @letter.posted_on == nil
+      @letter.posted_on = Date.current
+    end
     @letter.save
     redirect_to timeline_baby_path(@letter.baby_id)
   end
@@ -43,6 +46,6 @@ class LettersController < ApplicationController
     end
 
     def letter_params
-      params.require(:letter).permit(:title, :content, :date, :baby_id)
+      params.require(:letter).permit(:title, :content, :posted_on, :baby_id)
     end
 end

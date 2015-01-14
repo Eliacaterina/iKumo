@@ -15,7 +15,7 @@
       <tr>
         <td><%= letter.title %></td>
         <td><%= letter.content %></td>
-        <td><%= letter.date %></td>
+        <td><%= letter.posted_on %></td>
         <td><%= link_to 'Show', letter %></td>
         <td><%= link_to 'Edit', edit_letter_path(letter) %></td>
         <td><%= link_to 'Destroy', letter, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -11,7 +11,7 @@ class BabiesController < ApplicationController
     @letters = @baby.letters
     @photos = @baby.photos
 
-    letters = @letters.order(:date).group_by(&:date)
+    letters = @letters.order(:posted_on).group_by(&:posted_on)
     photos  = @baby.photos.order(:date_taken).group_by(&:date_taken)
     @timeline_media = letters.deeper_merge(photos)
 

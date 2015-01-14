@@ -3,7 +3,7 @@ class CreateLetters < ActiveRecord::Migration
     create_table :letters do |t|
       t.string :title
       t.text :content
-      t.date :date
+      t.date :posted_on
       t.belongs_to :baby
 
       t.timestamps

@@ -66,7 +66,7 @@
             <%= form_for @letter, :class => "form-horizontal" do |f| %>
 
               <div class="form-group" id="letter-date">
-                <%= f.text_field :date, :class =>"datepicker form-control", :placeholder => Time.now.strftime("%B %e, %Y") %>
+                <%= f.text_field :posted_on, :class =>"datepicker form-control", :placeholder => Time.now.strftime("%B %e, %Y") %>
               </div>
 
               <div class="form-group">

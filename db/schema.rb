@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20141217113916) do
   create_table "letters", force: true do |t|
     t.string   "title"
     t.text     "content"
-    t.date     "date"
+    t.date     "posted_on"
     t.integer  "baby_id"
     t.datetime "created_at"
     t.datetime "updated_at"
